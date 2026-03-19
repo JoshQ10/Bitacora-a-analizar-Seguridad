@@ -1,4 +1,4 @@
-FROM node:20.20.1-trixie-slim
+FROM node:20.20.1-alpine3.22
 
 LABEL maintainer="Subash SN"
 
