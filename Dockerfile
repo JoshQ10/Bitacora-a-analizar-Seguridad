@@ -1,13 +1,18 @@
-# Damn Vulnerable NodeJS Application
+FROM node:20-slim
 
-FROM node:carbon
-LABEL MAINTAINER "Subash SN"
+LABEL maintainer="Subash SN"
 
 WORKDIR /app
 
+COPY package*.json ./
+
+# Instalar dependencias primero (mejor práctica)
+RUN npm install --omit=dev
+
 COPY . .
 
-RUN chmod +x /app/entrypoint.sh \
-	&& npm install
+RUN chmod +x /app/entrypoint.sh
+
+EXPOSE 3000
 
 CMD ["bash", "/app/entrypoint.sh"]
