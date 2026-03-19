@@ -27,7 +27,7 @@
     "morgan": "^1.9.0",
     "mysql2": "^3.9.3",
     "node-serialize": "0.0.4",
-    "passport": "^0.4.0",
+    "passport": "^0.6.0",
     "passport-local": "^1.0.0",
     "sequelize": "^6.6.5",
     "winston": "^3.0.0",
